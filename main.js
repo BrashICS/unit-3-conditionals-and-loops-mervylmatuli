@@ -14,7 +14,6 @@
 /*** Event Listeners ***/
 document.getElementById(
 
-
 /*** Functions ***/
 
 // A very accurate rounding function
