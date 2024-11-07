@@ -13,6 +13,7 @@
 
 /*** Event Listeners ***/
 document.getElementById("startGame").addEventListener("click", startGame);
+document.getElementById("menu").addEventListener("click", menu);
 
 
 /*** Functions ***/
@@ -43,7 +44,7 @@ function menu() {
 
 
     if (selection == 1) {
-        console.log("Let's play")
+        alert("Let's play")
     p_lay()
     }
     else if (selection == 2) {
@@ -58,7 +59,9 @@ function menu() {
     else if (selection == 5) {
         console.log("Bye!")
     }
-
+    else {
+        alert("you have to choose an option!")
+    }
 }
 
 function p_lay() {
@@ -72,6 +75,9 @@ function p_lay() {
     }
     else if (p == 3) {
         alert("I see you like a challenge!")
+    }
+    else {
+        alert("you have to choose an option!")
     }
 
 
