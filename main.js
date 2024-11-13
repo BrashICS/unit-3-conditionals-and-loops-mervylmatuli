@@ -27,8 +27,59 @@ function round(value, decimals) {
 // Get a random number from min to max
 function randInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
+
 }
 
+
+function random_until(min, max, stop) {
+    // error checking
+    if (max <= min) {
+        return -1;
+    }
+
+    if ((stop > max) || (stop < min)) {
+        return -1;
+    }
+
+    // Generate first random number
+        let x = randInt(min, max);
+        
+    // Check to see if it's th step value
+        while (x != stop) {
+            console.log(x)
+            x = randInt(min, max);
+        
+        }
+return stop;
+
+}
+
+function average (n) {
+    let avg = 0;
+    let count = 1;
+
+    while (count <= n) {
+        avg =  avg + Number(prompt('Please enter value ${count}/${n}'));
+
+        count = count + 1;
+    }
+    avg = round(avg / n, 1);
+    console.log("The average is ${avg}")
+}
+
+function r() {
+
+    let die1 = randInt(1, 6);
+let die2 = randInt(1, 6);
+let count = 1;
+while (die1 != 1 && die2 != 1) {
+  die1 = randInt(1, 6);
+  die2 = randInt(1, 6);
+  count += 1;
+}
+
+console.log(`Rolled snake eyes after ${count} rolls.`);
+}
 function menu() {
 
     // Setup the menu
@@ -64,6 +115,7 @@ function menu() {
     }
 }
 
+// testing
 function p_lay() {
     let p = +prompt("What difficulty would you like to play in? (1)easy (2)medium (3)hard")
 
@@ -83,6 +135,7 @@ function p_lay() {
 
 }
 
+// Haunted house game
 
 function startGame() {
     let user_name = +prompt ("What is your name?")
